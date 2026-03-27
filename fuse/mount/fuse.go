@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"bazil.org/fuse"
-	"bazil.org/fuse/fs"
+	"github.com/anacrolix/fuse"
+	"github.com/anacrolix/fuse/fs"
 )
 
 var ErrNotMounted = errors.New("not mounted")
