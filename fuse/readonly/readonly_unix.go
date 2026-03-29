@@ -9,8 +9,8 @@ import (
 	"os"
 	"syscall"
 
-	fuse "github.com/anacrolix/fuse"
-	fs "github.com/anacrolix/fuse/fs"
+	fuse "bazil.org/fuse"
+	fs "bazil.org/fuse/fs"
 	mdag "github.com/ipfs/boxo/ipld/merkledag"
 	ft "github.com/ipfs/boxo/ipld/unixfs"
 	uio "github.com/ipfs/boxo/ipld/unixfs/io"

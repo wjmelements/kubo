@@ -14,9 +14,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/anacrolix/fuse"
-	"github.com/anacrolix/fuse/fs"
-	"github.com/anacrolix/fuse/fs/fstestutil"
+	"bazil.org/fuse"
+	"bazil.org/fuse/fs"
+	"bazil.org/fuse/fs/fstestutil"
 	"github.com/ipfs/kubo/core"
 	"github.com/ipfs/kubo/core/node"
 	"github.com/libp2p/go-libp2p-testing/ci"

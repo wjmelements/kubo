@@ -15,13 +15,13 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/anacrolix/fuse"
+	"bazil.org/fuse"
 
 	core "github.com/ipfs/kubo/core"
 	coreapi "github.com/ipfs/kubo/core/coreapi"
 	coremock "github.com/ipfs/kubo/core/mock"
 
-	fstest "github.com/anacrolix/fuse/fs/fstestutil"
+	fstest "bazil.org/fuse/fs/fstestutil"
 	chunker "github.com/ipfs/boxo/chunker"
 	"github.com/ipfs/boxo/files"
 	dag "github.com/ipfs/boxo/ipld/merkledag"

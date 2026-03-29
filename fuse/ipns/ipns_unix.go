@@ -18,8 +18,8 @@ import (
 	"github.com/ipfs/boxo/namesys"
 	"github.com/ipfs/boxo/path"
 
-	fuse "github.com/anacrolix/fuse"
-	fs "github.com/anacrolix/fuse/fs"
+	fuse "bazil.org/fuse"
+	fs "bazil.org/fuse/fs"
 	mfs "github.com/ipfs/boxo/mfs"
 	cid "github.com/ipfs/go-cid"
 	logging "github.com/ipfs/go-log/v2"
@@ -86,7 +86,7 @@ type Root struct {
 
 func ipnsPubFunc(ipfs iface.CoreAPI, key iface.Key) mfs.PubFunc {
 	return func(ctx context.Context, c cid.Cid) error {
-		_, err := ipfs.Name().Publish(ctx, path.FromCid(c), options.Name.Key(key.Name()), options.Name.AllowOffline(true))
+		_, err := ipfs.Name().Publish(ctx, path.FromCid(c), options.Name.Key(key.Name()))
 		return err
 	}
 }
@@ -207,7 +207,7 @@ func (r *Root) Close() error {
 }
 
 // Forget is called when the filesystem is unmounted. probably.
-// see comments here: https://pkg.go.dev/github.com/anacrolix/fuse/fs#FSDestroyer
+// see comments here: http://godoc.org/bazil.org/fuse/fs#FSDestroyer
 func (r *Root) Forget() {
 	err := r.Close()
 	if err != nil {

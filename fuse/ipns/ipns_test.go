@@ -12,12 +12,12 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/anacrolix/fuse"
+	"bazil.org/fuse"
 
 	core "github.com/ipfs/kubo/core"
 	coreapi "github.com/ipfs/kubo/core/coreapi"
 
-	fstest "github.com/anacrolix/fuse/fs/fstestutil"
+	fstest "bazil.org/fuse/fs/fstestutil"
 	racedet "github.com/ipfs/go-detect-race"
 	"github.com/ipfs/go-test/random"
 	ci "github.com/libp2p/go-libp2p-testing/ci"

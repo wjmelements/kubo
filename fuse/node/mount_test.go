@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/anacrolix/fuse"
+	"bazil.org/fuse"
 
 	core "github.com/ipfs/kubo/core"
 	ipns "github.com/ipfs/kubo/fuse/ipns"
